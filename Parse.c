@@ -57,7 +57,7 @@ char *find_path(info_t *info_data, char *path_str, char *command)
 
     if (!path_str)
         return (NULL);
-    if ((_strlen(command) > 2) && starts_with(command, "./"))
+    if ((custom_strlen(command) > 2) && string_starts_with(command, "./"))
     {
         if (is_exec_cd(info_data, command))
             return (command);
@@ -68,11 +68,11 @@ char *find_path(info_t *info_data, char *path_str, char *command)
         {
             full_path = duplicate_ch(path_str, current_position, path_index);
             if (!*full_path)
-                _strcat(full_path, command);
+                custom_strcat(full_path, command);
             else
             {
-                _strcat(full_path, "/");
-                _strcat(full_path, command);
+                custom_strcat(full_path, "/");
+                custom_strcat(full_path, command);
             }
             if (is_exec_cd(info_data, full_path))
                 return (full_path);

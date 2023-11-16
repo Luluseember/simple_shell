@@ -158,10 +158,10 @@ char *_strncat(char *, char *, int);
 char *_strchr(char *, char);
 
 /*string prototype*/
-int _strlen(char *);
+int custom_strlen(char *);
 int _strcmp(char *, char *);
-char *starts_with(const char *, const char *);
-char *_strcat(char *, char *);
+char *string_starts_with(const char *, const char *);
+char *custom_strcat(char *, char *);
 
 /*list prototype*/
 size_t list_len(const list_t *);
