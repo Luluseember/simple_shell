@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 
 /**
  * mainc - Entry point for the shell program.

@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 
 /**
  * const_memset - Fills the memory with a constant byte

@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 
 /**
  * interactive_mode - Checks if the shell is in interactive mode

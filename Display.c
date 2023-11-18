@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 #define MAX_CMD_LEN 100
 
 /**

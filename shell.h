@@ -30,6 +30,7 @@ int exec(int count, char *arrayv[]);
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <Prints.h>
 
 /*Constants for read/write buffers */
 #define READ_BUF_SIZE 1024
@@ -65,7 +66,7 @@ extern char **environ;
  */
 
 typedef struct liststr /*struct prototype*/
-{
+i{
 	int num;
 	char *str;
 	struct liststr *next;
@@ -92,7 +93,8 @@ typedef struct liststr /*struct prototype*/
  * @cmd_buf_type: CMD_type ||, &&, ;
  * @readfd: The fd from which to read line input
  * @histcount: The history line number count
- */
+ * @show_history: displays the history list, one command by line
+*/
 
 typedef struct passinfo
 {
@@ -145,6 +147,11 @@ void shell_interactive(void);
 void shell_no_interactive(void);
 int handle_path(char *PATH);
 int exit_shell(void);
+int set_alias(info_t *info, char *str);
+int print_alias(list_t *node);
+int show_alias(info_t *info);
+int unset_alias(info_t *info, char *str);
+int show_history(info_t *info);
 
 /* setenv_and_unsetetenv.c */
 char **get_environ(info_t *);
@@ -155,7 +162,7 @@ int _setenv(info_t *, char *, char *);
 /*string prototype */
 char *_strncpy(char *dest, char *src, int n);
 char *_strncat(char *, char *, int);
-char *_strchr(char *, char);
+:char *_strchr(char *, char);
 
 /*string prototype*/
 int custom_strlen(char *);

@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 
 /**
  * cust_strncpy - Copies a string

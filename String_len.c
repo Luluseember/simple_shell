@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "Prints.h"
 
 /**
  * custom_strlen - Returns the length of a string
